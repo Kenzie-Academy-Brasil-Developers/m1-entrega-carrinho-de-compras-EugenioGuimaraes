@@ -5,17 +5,17 @@ let x = `
 <main>
     <section class="container">
         <div class="cabecalho">
-
+            <span>Total</span>
+            <span>Valor</span>
         </div>
         <ul class="lista__carrinho">
         </ul>
         <div class="subtotal">
-            <div>
+            <div class="mensagem">
                 <span>Subtotal</span>
                 <span>valor</span>
             </div>
-            <button>
-            </button>
+            <button type="submit" name="finalizar">Finalizar compra</button>
         </div>
     </section>
 </main>
@@ -52,11 +52,11 @@ function criarCard(arr){
     }
 }
 
-criarItem(1, 'Matheus', `R$: ${'10.00'}`)
-criarItem(1, 'Matheus', `R$: ${'10.00'}`)
-criarItem(1, 'Matheus', `R$: ${'10.00'}`)
-criarItem(1, 'Matheus', `R$: ${'10.00'}`)
-criarItem(1, 'Matheus', `R$: ${'10.00'}`)
+criarItem(1, 'Matheus', `R$: ${'1.00'}`)
+criarItem(1, 'Matheus', `R$: ${'1.00'}`)
+criarItem(1, 'Matheus', `R$: ${'1.00'}`)
+criarItem(1, 'Matheus', `R$: ${'1.00'}`)
+criarItem(1, 'Matheus', `R$: ${'1.00'}`)
 criarCard(produtos);
 // console.log(criarCard(produtos));
 

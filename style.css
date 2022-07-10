@@ -1,0 +1,53 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, cite, em, img, strong, b, u, i, ol, ul, li, article, aside, footer, nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.container{
+max-width: 960px;
+margin: 0 auto;
+}
+
+.cabecalho{
+    background-color: #464646;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+}
+
+.lista__carrinho li{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subtotal .mensagem{
+    padding: 10px 200px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(124, 124, 124);
+    gap: 450px;
+    border-radius: 8px;
+
+}
+
+.subtotal button{
+    padding: 10px 420px;
+    background-color: greenyellow;
+    border-radius: 8px;
+
+}
