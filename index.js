@@ -44,7 +44,7 @@ let divCabe = document.createElement('div');
 divCabe.setAttribute('class', 'cabecalho');
 
 let divCabeSpan1 = document.createElement('span');
-divCabeSpan1.innerText = 'Total';
+divCabeSpan1.innerText = 'Item';
 
 let divCabeSpan2 = document.createElement('span');
 divCabeSpan2.innerText = 'Valor';
@@ -85,9 +85,9 @@ function criarCard(arr){
     for(let i = 0; i < arr.length; i++){
         const li = document.createElement('li');
         const nome = document.createElement('span')
-              nome.innerText = arr[i].nome;
+            nome.innerText = arr[i].nome;
         const preco = document.createElement('span')
-              preco.innerText = `R$: ${arr[i].preco}`;
+            preco.innerText = `R$: ${arr[i].preco}`;
         
         
         li.append(nome, preco)
@@ -104,11 +104,11 @@ function somar(arr){
     return total;
 }
 
-criarItem(1, 'Uva crimson', 44.99)
-criarItem(2, 'Vinho canção', 17.98)
-criarItem(3, 'Água dee coco', 8.99)
-criarItem(4, 'Mamão', 9.98)
-criarItem(5, 'Água tônica', 17.98)
+criarItem(1, 'Uva crimson', 44.99);
+criarItem(2, 'Vinho canção', 17.98);
+criarItem(3, 'Água dee coco', 8.99);
+criarItem(4, 'Mamão', 9.98);
+criarItem(5, 'Água tônica', 17.98);
 criarCard(produtos);
 
 // console.log(produtos);
