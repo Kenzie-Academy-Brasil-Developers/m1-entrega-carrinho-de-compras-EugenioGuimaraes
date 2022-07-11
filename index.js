@@ -104,11 +104,11 @@ function somar(arr){
     return total;
 }
 
-criarItem(1, 'Matheus', 1.99)
-criarItem(2, 'Matheus', 1.99)
-criarItem(3, 'Matheus', 1.99)
-criarItem(4, 'Matheus', 1.99)
-criarItem(5, 'Matheus', 1.99)
+criarItem(1, 'Uva crimson', 44.99)
+criarItem(2, 'Vinho canção', 17.98)
+criarItem(3, 'Água dee coco', 8.99)
+criarItem(4, 'Mamão', 9.98)
+criarItem(5, 'Água tônica', 17.98)
 criarCard(produtos);
 
 // console.log(produtos);
