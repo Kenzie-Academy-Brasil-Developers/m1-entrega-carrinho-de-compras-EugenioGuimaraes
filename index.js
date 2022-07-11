@@ -61,9 +61,6 @@ divMensagemSubtotal.setAttribute('class', 'mensagem');
 let divMensagemSubtotalSpan1 = document.createElement('span');
 divMensagemSubtotalSpan1.innerText = 'Subtotal';
 
-let divMensagemSubtotalSpan2 = document.createElement('span');
-divMensagemSubtotalSpan2.innerText = `R$: ${somar(produtos)}`;
-
 let divButton = document.createElement('button');
 divButton.innerText = `Finalizar compra`;
 
@@ -73,9 +70,6 @@ principal.append(container);
 container.append(divCabe, tagUl, subtotal);
 divCabe.append(divCabeSpan1, divCabeSpan2);
 subtotal.append(divMensagemSubtotal, divButton);
-divMensagemSubtotal.append(divMensagemSubtotalSpan1,divMensagemSubtotalSpan2);
-
-
 
 
 function criarItem(id, nome, preco){
@@ -105,7 +99,7 @@ function criarCard(arr){
 function somar(arr){
     let total = 0;
     for(let i = 0; i < arr.length; i++){
-        total = total + arr[i].preco;
+        total += arr[i].preco;
     }
     return total;
 }
@@ -117,4 +111,9 @@ criarItem(4, 'Matheus', 1.99)
 criarItem(5, 'Matheus', 1.99)
 criarCard(produtos);
 
-console.log(produtos);
+// console.log(produtos);
+
+let divMensagemSubtotalSpan2 = document.createElement('span');
+divMensagemSubtotalSpan2.innerText = `R$: ${somar(produtos)}`;
+
+divMensagemSubtotal.append(divMensagemSubtotalSpan1,divMensagemSubtotalSpan2);
