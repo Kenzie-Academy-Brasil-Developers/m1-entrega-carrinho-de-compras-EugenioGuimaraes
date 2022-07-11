@@ -23,13 +23,17 @@
 // let body = document.querySelector('body');
 // body.innerHTML = x;
 
-// const produtos = [];
+const produtos = [];
 
 
 
 let body = document.querySelector('body');
 
 let header = document.createElement('header');
+
+let titulo = document.createElement('h1');
+titulo.setAttribute('class', 'containerHeader')
+titulo.innerText = 'Virtual Market'
 
 let principal = document.createElement('main');
 
@@ -43,7 +47,7 @@ let divCabeSpan1 = document.createElement('span');
 divCabeSpan1.innerText = 'Total';
 
 let divCabeSpan2 = document.createElement('span');
-divCabeSpan1.innerText = 'Valor';
+divCabeSpan2.innerText = 'Valor';
 
 let tagUl = document.createElement('ul');
 tagUl.setAttribute('class', 'lista__carrinho');
@@ -51,13 +55,25 @@ tagUl.setAttribute('class', 'lista__carrinho');
 let subtotal = document.createElement('div');
 subtotal.setAttribute('class', 'subtotal');
 
-let mensagemSubtotal = document.createElement('div');
-subtotal.setAttribute('class', 'mensagem');
+let divMensagemSubtotal = document.createElement('div');
+divMensagemSubtotal.setAttribute('class', 'mensagem');
 
+let divMensagemSubtotalSpan1 = document.createElement('span');
+divMensagemSubtotalSpan1.innerText = 'Subtotal';
 
-body.append(header)
-body.append(principal)
+let divMensagemSubtotalSpan2 = document.createElement('span');
+divMensagemSubtotalSpan2.innerText = `R$: ${somar(produtos)}`;
 
+let divButton = document.createElement('button');
+divButton.innerText = `Finalizar compra`;
+
+body.append(header, principal);
+header.append(titulo)
+principal.append(container);
+container.append(divCabe, tagUl, subtotal);
+divCabe.append(divCabeSpan1, divCabeSpan2);
+subtotal.append(divMensagemSubtotal, divButton);
+divMensagemSubtotal.append(divMensagemSubtotalSpan1,divMensagemSubtotalSpan2);
 
 
 
@@ -77,7 +93,7 @@ function criarCard(arr){
         const nome = document.createElement('span')
               nome.innerText = arr[i].nome;
         const preco = document.createElement('span')
-              preco.innerText = arr[i].preco;
+              preco.innerText = `R$: ${arr[i].preco}`;
         
         
         li.append(nome, preco)
@@ -86,11 +102,19 @@ function criarCard(arr){
     }
 }
 
-criarItem(1, 'Matheus', `R$: ${'1.00'}`)
-criarItem(1, 'Matheus', `R$: ${'1.00'}`)
-criarItem(1, 'Matheus', `R$: ${'1.00'}`)
-criarItem(1, 'Matheus', `R$: ${'1.00'}`)
-criarItem(1, 'Matheus', `R$: ${'1.00'}`)
-criarCard(produtos);
-// console.log(criarCard(produtos));
+function somar(arr){
+    let total = 0;
+    for(let i = 0; i < arr.length; i++){
+        total = total + arr[i].preco;
+    }
+    return total;
+}
 
+criarItem(1, 'Matheus', 1.99)
+criarItem(2, 'Matheus', 1.99)
+criarItem(3, 'Matheus', 1.99)
+criarItem(4, 'Matheus', 1.99)
+criarItem(5, 'Matheus', 1.99)
+criarCard(produtos);
+
+console.log(produtos);

@@ -10,9 +10,23 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, cite, em, img, strong, b, u
 	vertical-align: baseline;
 }
 
+header{
+    border-bottom: 1px solid rgba(65, 64, 64, 0.4);
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+.containerHeader{
+    max-width: 960px;
+    margin: 0 auto;
+    font-weight: 1000;
+    font-size: xx-large;
+    }
+
 .container{
-max-width: 960px;
-margin: 0 auto;
+max-width: 800px;
+margin: 5% auto;
+/* background-color: grey; */
 }
 
 .cabecalho{
@@ -36,7 +50,7 @@ margin: 0 auto;
     align-items: center;
 }
 .subtotal .mensagem{
-    padding: 10px 200px;
+    padding: 10px 120px;
     display: flex;
     justify-content: space-around;
     background-color: rgb(124, 124, 124);
@@ -46,7 +60,7 @@ margin: 0 auto;
 }
 
 .subtotal button{
-    padding: 10px 420px;
+    padding: 10px 340px;
     background-color: greenyellow;
     border-radius: 8px;
 
