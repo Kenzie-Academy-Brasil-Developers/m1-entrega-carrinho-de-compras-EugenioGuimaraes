@@ -41,7 +41,7 @@ margin: 5% auto;
     color: white;
 }
 
-.lista__carrinho li{
+.ProductList li{
     display: flex;
     justify-content: space-around;
     text-align: left;

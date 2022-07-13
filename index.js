@@ -50,9 +50,9 @@ let divCabeSpan2 = document.createElement('span');
 divCabeSpan2.innerText = 'Valor';
 
 let tagUl = document.createElement('ul');
-tagUl.setAttribute('class', 'lista__carrinho');
+tagUl.setAttribute('class', 'ProductList');
 
-let subtotal = document.createElement('div');
+let subtotal = document.createElement('section');
 subtotal.setAttribute('class', 'subtotal');
 
 let divMensagemSubtotal = document.createElement('div');
@@ -81,9 +81,10 @@ function criarItem(id, nome, preco){
 }
 
 function criarCard(arr){
-    const item = document.querySelector('.lista__carrinho')
+    const item = document.querySelector('.ProductList')
     for(let i = 0; i < arr.length; i++){
         const li = document.createElement('li');
+            li.classList.add('ProductDetails')
         const nome = document.createElement('span')
             nome.innerText = arr[i].nome;
         const preco = document.createElement('span')
